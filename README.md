@@ -1,14 +1,30 @@
-Research
+### [HIquant ](https://web.northeastern.edu/slavov/2014_HIquant/)
+
+This is the python version of HIquant
+
+
+
+
+
+
+
+
+
+
+
+
+
+Technical Notes:
 
 
 - Stack inferred protein matrix to a single vector along row dimension.
   ``` python
   P_homo_SVD_i = np.concatenate(SVD_protein, axis=0) # stack rows of inferred SVD_protein to a vector
   P_homo_SVD[str(cc_i)] =  P_homo_SVD_i
-
+  
   P_homo_QP_i = np.concatenate(QP_protein,axis=0) # stack rows of inferred QP_protein to a vector
   P_homo_QP[str(cc_i)] = P_homo_QP_i
-
+  
   P_homo_CD_i = np.concatenate(CD_protein,axis=0) # stack rows of inferred CD_protein to a vector
   P_homo_CD[str(cc_i)] = P_homo_CD_i
   ```
@@ -24,4 +40,5 @@ Research
   P_QP1 = np.array(list([np.concatenate(QP_homo_P[str(cc_i)],axis=0) for cc_i in range(21)]))[mask]
   ```
 - numpy.matlib return data type 'matrix' instead of array
-- ​
+
+  
